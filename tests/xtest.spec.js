@@ -1,10 +1,10 @@
 import { test, expect } from '@playwright/test';
 
 
-const USER_NAME="kilicarslan87@gmail.com";
-const PASSWORD="Subzero11*";
-const TEL_NO="5334907732";
-const MSG_ADDRESS="MuratAr81013536";
+const USER_NAME="xxxxxxxxx";
+const PASSWORD="xxxxxxxxx";
+const TEL_NO="xxxxxxxxx";
+const MSG_ADDRESS="xxxxxxxxx";
 
 test('has title', async ({ page }) => {
     await page.goto('https://twitter.com/?lang=tr');
@@ -31,7 +31,7 @@ test.describe('twitter login and message control', () => {
         await page.waitForTimeout(3000);
 
         //Loginin başarılı olup olmadığını kontrol ediyoruz
-        await expect(page.getByRole('link', { name: 'Murat Arslan' })).toBeVisible();  
+        await expect(page.getByRole('link', { name: 'xxxxxxxxx' })).toBeVisible();  
 
         //mesaj kutusuna gidiyoruz
         await page.getByTestId('AppTabBar_DirectMessage_Link').click(); 
@@ -60,7 +60,7 @@ test.describe('twitter login and message control', () => {
         await page.getByTestId('searchPeople').fill(MSG_ADDRESS);
 
         await page.waitForTimeout(3000);
-        await page.getByRole('button', { name: 'Murat Arslan @MuratAr81013536' }).click();
+        await page.getByRole('button', { name: '"xxxxxxxxx"' }).click();
 
         await page.getByTestId('nextButton').click();
 
